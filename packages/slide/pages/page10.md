@@ -1,0 +1,30 @@
+<h1>常用api</h1>
+<hr>
+<div class="mt-2">
+<ul>
+  <li>
+    <a 
+      href="https://codesandbox.io/p/devbox/pinia-getter-mapstate-mapactions-3r3jmh" 
+      target="_blank"
+    >
+      getters/mapState/mapActions
+    </a>
+  </li>
+  <li>
+    <a 
+      href="https://codesandbox.io/p/devbox/pinia-storetorefs-vwcwk8" 
+      target="_blank"
+    >
+      storeToRefs
+    </a>
+  </li>
+    <li>
+    <a 
+      href="https://codesandbox.io/p/devbox/pinia-plugins-example-76qvkv" 
+      target="_blank"
+    >
+      pinia plugins
+    </a>
+  </li>
+</ul>
+</div>

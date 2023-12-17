@@ -1,0 +1,24 @@
+{
+  "name": "pinia-intro",
+  "engines": {
+    "pnpm": ">=8"
+  },
+  "version": "1.0.0",
+  "scripts": {
+    "dev:example:pinia-basic": "cd packages/examples/pinia-basic && pnpm dev",
+    "dev:example:pinia-getter-mapState-mapActions": "cd packages/examples/pinia-getter-mapState-mapActions && pnpm dev",
+    "dev:example:pinia-lazy-load": "cd packages/examples/pinia-lazy-load && pnpm dev",
+    "dev:example:pinia-plugins": "cd packages/examples/pinia-plugins && pnpm dev",
+    "dev:example:pinia-nested-store": "cd packages/examples/pinia-nested-store && pnpm dev",
+    "dev:example:pinia-storeToRefs": "cd packages/examples/pinia-storeToRefs && pnpm dev",
+    "dev:example:pinia-update-state-inside-component": "cd packages/examples/pinia-update-state-inside-component && pnpm dev",
+    "dev:example:pinia-update-state-outside-component": "cd packages/examples/pinia-update-state-outside-component && pnpm dev",
+    "dev:example:vuex-basic": "cd packages/examples/vuex-basic && pnpm dev",
+    "dev:example:vuex-lazy-load": "cd packages/examples/vuex-lazy-load && pnpm dev",
+    "dev:example:vuex-nested-store": "cd packages/examples/vuex-nested-store && pnpm dev",
+    "dev:example:vuex-update-state-inside-component": "cd packages/examples/vuex-update-state-inside-component && pnpm dev",
+    "dev:example:vuex-update-state-outside-component": "cd packages/examples/vuex-update-state-outside-component && pnpm dev",
+    "dev:slide": "cd packages/slide && pnpm dev"
+  },
+  "packageManager": "pnpm@8.5.1"
+}
