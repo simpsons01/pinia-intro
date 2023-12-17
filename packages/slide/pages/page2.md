@@ -5,5 +5,5 @@
  <li class="mt-2">與Vuex的差異</li> 
  <li class="mt-2">常用的api</li>
  <li class="mt-2">如何撰寫測試</li>
- <li class="mt-2">是否使用composable function複用邏輯</li>
+ <li class="mt-2">討論:是否使用setup store</li>
 </ul>

@@ -13,11 +13,15 @@
     "dev:example:pinia-storeToRefs": "cd packages/examples/pinia-storeToRefs && pnpm dev",
     "dev:example:pinia-update-state-inside-component": "cd packages/examples/pinia-update-state-inside-component && pnpm dev",
     "dev:example:pinia-update-state-outside-component": "cd packages/examples/pinia-update-state-outside-component && pnpm dev",
+    "dev:example:pinia-used-other-store": "cd packages/examples/pinia-used-other-store && pnpm dev",
+    "dev:example:pinia-unit-test": "cd packages/examples/pinia-unit-test && pnpm test:dev",
+    "dev:example:pinia-setup-store": "cd packages/examples/pinia-setup-store && pnpm dev",
     "dev:example:vuex-basic": "cd packages/examples/vuex-basic && pnpm dev",
     "dev:example:vuex-lazy-load": "cd packages/examples/vuex-lazy-load && pnpm dev",
     "dev:example:vuex-nested-store": "cd packages/examples/vuex-nested-store && pnpm dev",
     "dev:example:vuex-update-state-inside-component": "cd packages/examples/vuex-update-state-inside-component && pnpm dev",
     "dev:example:vuex-update-state-outside-component": "cd packages/examples/vuex-update-state-outside-component && pnpm dev",
+    "dev:example:vuex-used-other-store": "cd packages/examples/vuex-used-other-store && pnpm dev",
     "dev:slide": "cd packages/slide && pnpm dev"
   },
   "packageManager": "pnpm@8.5.1"

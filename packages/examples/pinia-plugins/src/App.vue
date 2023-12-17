@@ -1,30 +1,43 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import { computed } from "vue";
+import { useStore } from "./store";
+export default {
+  setup() {
+    const store = useStore();
+
+    const count = computed(() => store.count);
+
+    const addCountByOne = () => {
+      try {
+        store.addCountByOne();
+      } catch (error) {
+        console.log("error happened");
+      }
+    };
+
+    const addPluginCountByOne = () => {
+      store.addPluginCountByOne();
+    };
+
+    const pluginCount = computed(() => store.pluginCount);
+
+    return {
+      pluginCount,
+      count,
+      addCountByOne,
+      addPluginCountByOne,
+    };
+  },
+};
 </script>
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <div>count: {{ count }}</div>
+    <div><button @click="addCountByOne">+</button></div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <div>
+    <div>pluginCount: {{ pluginCount }}</div>
+    <div><button @click="addPluginCountByOne">+</button></div>
+  </div>
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>

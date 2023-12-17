@@ -1,30 +1,37 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import { computed } from "vue";
+import { useStore } from "./store";
+export default {
+  setup() {
+    const store = useStore();
+
+    const count = computed(() => store.count);
+    
+    const addCountByAction = () => store.addCount(count.value + 1);
+
+    const addCountByPatch = () => store.$patch({ count: count.value + 1 });
+
+    const addCountByPatchCallBack = () => store.$patch(state => state.count = count.value + 1);
+
+    const addCountByDirectlyAssignValue = () => store.count = count.value + 1;
+
+    return {
+      count,
+      addCountByAction,
+      addCountByPatch,
+      addCountByPatchCallBack,
+      addCountByDirectlyAssignValue
+    };
+  },
+};
 </script>
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <div>count: {{ count }}</div>
+    <div><button @click="addCountByAction">addCountByAction</button></div>
+    <div><button @click="addCountByPatch">addCountByPatch</button></div>
+    <div><button @click="addCountByPatchCallBack">addCountByPatchCallBack</button></div>
+    <div><button @click="addCountByDirectlyAssignValue">addCountByDirectlyAssignValue</button></div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
