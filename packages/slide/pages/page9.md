@@ -7,7 +7,7 @@
        <li>
           <a 
             target="_blank" 
-            href="?????"
+            href="http://localhost:6068"
           >
             範例
           </a>
@@ -38,7 +38,7 @@ export default {
           <li>
               <a 
                 target="_blank" 
-                href="????"
+                href="http://localhost:6074"
               >
                 範例
               </a>

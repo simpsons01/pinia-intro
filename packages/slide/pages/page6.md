@@ -7,7 +7,7 @@
       <li>
         <a 
           target="_blank" 
-          href="????"
+          href="http://localhost:6060"
         >
           store example
         </a>
@@ -15,7 +15,7 @@
       <li>
         <a 
           target="_blank" 
-          href="????"
+          href="http://localhost:6063"
         >
           nested store example
         </a>
@@ -45,7 +45,7 @@ export const useStore = defineStore("count", {
        <li>
         <a 
           target="_blank" 
-          href="????"
+          href="http://localhost:6071"
         >
           store example
         </a>
@@ -53,7 +53,7 @@ export const useStore = defineStore("count", {
        <li>
         <a 
           target="_blank" 
-          href="????"
+          href="http://localhost:6073"
         >
           nested store example
         </a>

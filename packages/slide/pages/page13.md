@@ -1,7 +1,7 @@
 <h1>常用API - getters/mapState/mapActions</h1>
 <hr>
 <div class="mt-2 mb-1">
-  <a  href="???" target="_blank">範例</a>
+  <a  href="http://localhost:6061" target="_blank">範例</a>
 </div>
 ```js {monaco}
 import { mapState, mapActions } from "pinia"

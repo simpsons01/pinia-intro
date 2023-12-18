@@ -1,7 +1,7 @@
 <h1>其他(少用)API - pinia plugin</h1>
 <hr>
 <div class="mt-2">
-  <a  href="???" target="_blank">範例</a>
+  <a  href="http://localhost:6064" target="_blank">範例</a>
 </div>
 ```js {monaco}
 import { createPinia } from "pinia";

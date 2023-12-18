@@ -1,7 +1,7 @@
 <h1>如何撰寫測試</h1>
 <hr>
 <div class="mt-2">
-  <a  href="???" target="_blank">範例</a>
+  <a  href="http://localhost:6067" target="_blank">範例</a>
 </div>
 ```js {monaco}
 import { describe, beforeEach, it, expect } from "vitest"

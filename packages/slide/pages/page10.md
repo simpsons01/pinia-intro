@@ -7,7 +7,7 @@
        <li>
         <a 
           target="_blank" 
-          href="?????"
+          href="http://localhost:6069"
         >
           範例
         </a>
@@ -32,7 +32,7 @@ store.$patch(state => state.count = store.count + 1);
         <li>
           <a 
             target="_blank" 
-            href="????"
+            href="http://localhost:6075"
           >
             範例
           </a>

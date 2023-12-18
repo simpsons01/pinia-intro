@@ -7,7 +7,7 @@
        <li>
           <a 
             target="_blank" 
-            href="????????"
+            href="http://localhost:6070"
           >
             範例
           </a>
@@ -42,7 +42,7 @@ export const useStore = defineStore("user.todos", {
       <li>
           <a 
             target="_blank" 
-            href="????????"
+            href="http://localhost:6076"
           >
             範例
           </a>

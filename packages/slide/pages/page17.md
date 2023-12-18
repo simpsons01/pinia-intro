@@ -1,7 +1,7 @@
 <h1>其他(少用)API - setup store</h1>
 <hr>
 <div class="mt-2">
-  <a  href="???" target="_blank">範例</a>
+  <a  href="http://localhost:6065" target="_blank">範例</a>
 </div>
 ```js {monaco}
 import { computed, ref } from "vue

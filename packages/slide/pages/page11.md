@@ -7,7 +7,7 @@
        <li>
         <a 
           target="_blank" 
-          href="????"
+          href="http://localhost:6062"
         >
           範例
         </a>
@@ -26,7 +26,7 @@ const store = useStore()
       <li>
           <a 
             target="_blank" 
-            href="????"
+            href="http://localhost:6072"
           >
             範例
           </a>
