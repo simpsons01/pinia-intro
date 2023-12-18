@@ -5,8 +5,8 @@ export const useStore = defineStore("count", {
     count: 0
   }),
   actions: {
-    addCount(count) {
-      this.count += count;
+    addCountByOne() {
+      this.count += 1;
     },
   }
 });

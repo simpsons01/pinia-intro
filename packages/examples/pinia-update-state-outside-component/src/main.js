@@ -65,7 +65,7 @@ createUpdateStateButton(
     }
     actionTimer = setInterval(() => {
       const store = useStore()  
-      store.addCount(1)
+      store.addCountByOne()
     }, 100)
   },
   () => {

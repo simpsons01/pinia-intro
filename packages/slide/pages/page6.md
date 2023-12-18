@@ -7,7 +7,7 @@
       <li>
         <a 
           target="_blank" 
-          href="https://codesandbox.io/p/devbox/pinia-basic-store-example-l2zsgl"
+          href="????"
         >
           store example
         </a>
@@ -15,26 +15,37 @@
       <li>
         <a 
           target="_blank" 
-          href="https://codesandbox.io/p/devbox/pinia-nested-store-example-m7l5tr"
+          href="????"
         >
           nested store example
         </a>
       </li>
     </ul>
-    <div class="mt-2 flex-1 img-wrapper">
-      <img class="responsive-img" src="/assets/pinia-basic-store.png">
-    </div>
+```js {monaco}
+import { defineStore } from "pinia";
+
+export const useStore = defineStore("count", {
+  state: () => ({
+    count: 0,
+  }),
+  actions: {
+    addCountByOne() {
+      this.count += 1;
+    },
+  }
+});
+```
   </div>
   <div class="h-full w-[1px] bg-gray-2 gray-100 m-2 bg-black"></div>
   <div class="p-1 flex-1 flex flex-col">
     <h3 class="flex-initial">
-        Vuex
+      Vuex
     </h3>
     <ul class="flex-initial">
        <li>
         <a 
           target="_blank" 
-          href="https://codesandbox.io/p/sandbox/vuex-basic-store-example-nyj4rj"
+          href="????"
         >
           store example
         </a>
@@ -42,14 +53,30 @@
        <li>
         <a 
           target="_blank" 
-          href="https://codesandbox.io/p/sandbox/vuex-nested-store-example-4tpnlx"
+          href="????"
         >
           nested store example
         </a>
        </li>
     </ul>
-    <div class="mt-2 overflow-auto h-[73%]">
-      <img class="responsive-img" src="/assets/vuex-basic-store.png">
-    </div>
+```js {monaco}
+import { createStore  } from "vuex";
+
+export default createStore({
+  state: {
+    count: 0
+  },
+  actions: {
+    addCountByOne({ commit, state }) {
+      commit('updateCount', state.count + 1)
+    }
+  },
+  mutations: {
+    updateCount(state, count) {
+      state.count = count
+    }
+  }
+})
+```
   </div>
 </div>

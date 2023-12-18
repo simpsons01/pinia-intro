@@ -6,7 +6,7 @@ export default createStore({
   },
   actions: {
     addCount({ commit, state }, count) {
-      commit('updateCount', state.count + 1)
+      commit('updateCount', count)
     }
   },
   mutations: {

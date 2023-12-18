@@ -4,6 +4,8 @@ import store from "./store"
 
 const app = createApp(App)
 
+window.store = store
+
 app.use(store)
 
 app.mount("#app")
@@ -32,7 +34,7 @@ function createUpdateStateButton(content, updateFn, stopFn) {
       timer = null
     } 
     timer = setInterval(() => {
-     store.dispatch("addCount", 1)
+     store.dispatch("addCount", store.state.count + 1)
     }, 100)
    },
    () => {

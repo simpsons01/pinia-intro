@@ -1,26 +1,26 @@
-import { computed, inject, watch } from "vue"
+import { computed, inject, watch, ref } from "vue"
 import { defineStore } from "pinia";
-import useLocalStorage from "../composable/useLocalStorage"
 
 export const useStore = defineStore("count", () => {
-  
+
   const isTodayDateEven =  inject("isTodayDateEven")
 
-  const { val: count, updateVal } = useLocalStorage("count", 0)
+  const count = ref(0)
 
   const addCountRandom = () => {
     if(isTodayDateEven) {
-      updateVal(count.value + 2)
+      count.value = count.value + 2
     }else {
-      updateVal(count.value + 1)
+      count.value = count.value + 1
     }
   }
+
+  const doubleCount = computed(() => count.value * 2)
 
   watch(count, (oldVal, newVal) => {
     console.log(`count is updated, newVal is ${newVal} and oldVal is ${oldVal}`)
   })
-  
-  const doubleCount = computed(() => count.value * 2)
+
 
   return {
     count,

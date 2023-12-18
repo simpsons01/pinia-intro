@@ -1,19 +1,15 @@
-<template>
-  <div>
-    <div>count: {{ count }}</div>
-    <div>double count: {{ doubleCount }}</div>
-    <div><button @click="addCountByOne">+</button></div>
-  </div>
-</template>
-
-<script> 
+<h1>常用API - getters/mapState/mapActions</h1>
+<hr>
+<div class="mt-2 mb-1">
+  <a  href="???" target="_blank">範例</a>
+</div>
+```js {monaco}
+import { mapState, mapActions } from "pinia"
 import { useStore } from "./store"
-import { mapState, mapActions } from "pinia";
 
 const store = useStore()
 
 export default {
-  name: "App",
   computed: {
     ...mapState(store, {
       count: state => state.count,
@@ -24,6 +20,4 @@ export default {
    ...mapActions(store, "addCountByOne")
   }
 };
-</script>
-
-
+```
