@@ -15,6 +15,7 @@ export default createRouter({
       component: ProductA,
       beforeEnter: (from, to, next) => {
         store.registerModule("productA", productAStore)
+        store.dispatch("productA/getProducts")
         next()
       }
     },
@@ -23,6 +24,7 @@ export default createRouter({
       component: ProductB,
       beforeEnter: (from, to, next) => {
         store.registerModule("productB", productBStore)
+        store.dispatch("productB/getProducts")
         next()
       }
     }

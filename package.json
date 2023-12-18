@@ -22,7 +22,8 @@
     "dev:example:vuex-update-state-inside-component": "cd packages/examples/vuex-update-state-inside-component && pnpm dev",
     "dev:example:vuex-update-state-outside-component": "cd packages/examples/vuex-update-state-outside-component && pnpm dev",
     "dev:example:vuex-used-other-store": "cd packages/examples/vuex-used-other-store && pnpm dev",
-    "dev:slide": "cd packages/slide && pnpm dev"
+    "dev:slide": "cd packages/slide && pnpm dev",
+    "run-all-page": "node scripts/run-all-page.js"
   },
   "packageManager": "pnpm@8.5.1"
 }
