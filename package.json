@@ -1,8 +1,5 @@
 {
   "name": "pinia-intro",
-  "engines": {
-    "pnpm": ">=8"
-  },
   "version": "1.0.0",
   "scripts": {
     "dev:example:pinia-basic": "cd packages/examples/pinia-basic && pnpm dev",
@@ -24,6 +21,5 @@
     "dev:example:vuex-used-other-store": "cd packages/examples/vuex-used-other-store && pnpm dev",
     "dev:slide": "cd packages/slide && pnpm dev",
     "run-all-page": "node scripts/run-all-page.js"
-  },
-  "packageManager": "pnpm@8.5.1"
+  }
 }
