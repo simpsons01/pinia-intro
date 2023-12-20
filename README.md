@@ -4,4 +4,5 @@
 
 ## 啟動指令
 - pnpm install
-- pnpm run run-all-page
+- pnpm dev:slide
+- pnpm run-all-example

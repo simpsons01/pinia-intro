@@ -1,15 +1,23 @@
-<h1>常用API - storeToRefs</h1>
+<h1>常用API - getters/mapState/mapActions</h1>
 <hr>
 <div class="mt-2 mb-1">
-  <a  href="http://localhost:6066" target="_blank">範例</a>
+  <a  href="http://localhost:6061" target="_blank">範例</a>
 </div>
 ```js
-import { useStore } from "./store";
-import { storeToRefs  } from "pinia"
+import { mapState, mapActions } from "pinia"
+import { useStore } from "./store"
 
-const store = useStore();
-// ❌ lose reactivity
-const { count } = store
-// ✅ reactivity still connect
-const { count } = storeToRefs(store)
+const store = useStore()
+
+export default {
+  computed: {
+    ...mapState(store, {
+      count: state => state.count,
+      doubleCount: state => state.count
+    })
+  },
+  methods: {
+   ...mapActions(store, "addCountByOne")
+  }
+};
 ```

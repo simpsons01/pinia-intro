@@ -24,9 +24,13 @@ class PageRunner {
     }); 
   }
 }
-
+const excludeCmd = [
+  "dev:slide",
+  "run-all",
+  "run-all-example"
+]
 Object.keys(require(join(__dirname, "../package.json")).scripts).forEach(cmd => {
-  if(cmd !== "run-all-page") {
+  if(excludeCmd.indexOf(cmd) === -1) {
     new PageRunner().run("pnpm", [cmd]) 
   }
 })
