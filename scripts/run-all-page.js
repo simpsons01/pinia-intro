@@ -8,8 +8,9 @@ class PageRunner {
   run(cmd, arg) {
     this._spawnProcess = spawn(cmd, arg, { cwd: join(__dirname, "..") }) 
 
-    this._spawnProcess.stdout.once('data', (data) => {
-       console.log(cmd +  " " + arg.join(" ") + " " + "successfully")
+    this._spawnProcess.stdout.on('data', (data) => {
+       console.log(`from cmd: "${cmd}  ${arg.join(" ")} stdout"`)
+       console.log(data.toString())
     });
     
     this._spawnProcess.stderr.once('data', (data) => {
