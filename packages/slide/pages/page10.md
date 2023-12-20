@@ -13,7 +13,7 @@
         </a>
        </li>
     </ul>
-```js {monaco}
+```js
 import { useStore } from "./store"
 
 const store = useStore();
@@ -38,7 +38,7 @@ store.$patch(state => state.count = store.count + 1);
           </a>
        </li>
     </ul>
-```js {monaco}
+```js
 import store from "./store"
 
 store.dispatch("addCount", store.state.count + 1)

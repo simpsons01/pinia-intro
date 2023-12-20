@@ -13,7 +13,7 @@
         </a>
        </li>
     </ul>
-```js {monaco}
+```js
 import { useStore } from "./store"
 
 const store = useStore()
@@ -32,7 +32,7 @@ const store = useStore()
           </a>
       </li>
     </ul>
-```js {monaco}
+```js
 import store from "./store"
 import myModule from "./store/myModule"
 

@@ -1,10 +1,26 @@
-<h1>Pinia是什麼 - 官方怎麼說(2)</h1>
+<h1>與Vuex的差異 - 如何定義一個store(1)</h1>
 <hr>
-<div>
-  <div class="mt-2">
-   <a  href="https://pinia.vuejs.org/introduction.html" target="_blank">連結</a>
-  </div>
-  <div class="mt-2">
-    <img src="/assets/pinia-intro.png" />
-  </div>
-</div>
+```ts
+type StoreOption = {
+  state: () => { [key: string]: any },
+  actions: { [key: string]: (...args: any[]) => any }
+}
+
+// id must be unique
+type defineStore = (id: string, options: StoreOption) => () => Store
+```
+
+```js
+import { defineStore } from "pinia";
+
+export const useStore = defineStore("count", {
+  state: () => ({
+    count: 0,
+  }),
+  actions: {
+    addCountByOne() {
+      this.count += 1;
+    },
+  }
+});
+```

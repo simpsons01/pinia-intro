@@ -1,4 +1,4 @@
-<h1>與Vuex的差異 - 如何定義一個store</h1>
+<h1>與Vuex的差異 - 如何定義一個store(2)</h1>
 <hr>
 <div class="flex h-full">
   <div class="p-1 flex-1 flex flex-col">
@@ -21,7 +21,7 @@
         </a>
       </li>
     </ul>
-```js {monaco}
+```js
 import { defineStore } from "pinia";
 
 export const useStore = defineStore("count", {
@@ -59,7 +59,7 @@ export const useStore = defineStore("count", {
         </a>
        </li>
     </ul>
-```js {monaco}
+```js
 import { createStore  } from "vuex";
 
 export default createStore({

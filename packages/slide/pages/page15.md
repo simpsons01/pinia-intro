@@ -1,23 +1,19 @@
-<h1>如何撰寫測試</h1>
+<h1>其他(少用)API - pinia plugin(1)</h1>
 <hr>
 <div class="mt-2">
-  <a  href="http://localhost:6067" target="_blank">範例</a>
+  <a  href="http://localhost:6064" target="_blank">範例</a>
 </div>
-```js {monaco}
-import { describe, beforeEach, it, expect } from "vitest"
-import { setActivePinia, createPinia } from 'pinia'
-import { useStore } from './store'
+```js
+import { createPinia } from "pinia";
 
-describe('store', () => {
-  beforeEach(() => {
-    setActivePinia(createPinia())
-  })
+export const customPlugin = ({ pinia, app, store, options }) => {
+  // pinia     正在使用的pinia instance
+  // app       正在使用的vue app instance
+  // store     被創建的store
+  // options   store裡帶的選項
+};
 
-  it('increments', () => {
-    const store = useStore()
-    expect(store.count).toBe(0)
-    store.addCountByOne()
-    expect(store.count).toBe(1)
-  })
-})
+const pinia = createPinia()
+
+pinia.use(customPlugin)
 ```

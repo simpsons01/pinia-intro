@@ -3,7 +3,7 @@
 <div class="mt-2">
   <a  href="http://localhost:6065" target="_blank">範例</a>
 </div>
-```js {monaco}
+```js
 import { computed, ref } from "vue
 import { defineStore } from "pinia";
 

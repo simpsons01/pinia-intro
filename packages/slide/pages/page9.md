@@ -1,4 +1,4 @@
-<h1>與Vuex的差異 - 元件內讀取/更新資料的方式</h1>
+<h1>與Vuex的差異 - 元件內讀取/更新資料的方式(2)</h1>
 <hr>
 <div class="flex h-full">
   <div class="p-1 flex-1">
@@ -13,14 +13,14 @@
           </a>
        </li>
     </ul>
-```js {monaco}
+```js
 import { useStore } from "./store"
 
 export default {
   setup() {
     const store = useStore();
 
-    store.count;
+    store.count
 
     store.addCountByOne();
 
@@ -44,7 +44,7 @@ export default {
               </a>
           </li>
     </ul>
-```js {monaco}
+```js
 import { mapState, mapActions } from "vuex";
 
 export default {

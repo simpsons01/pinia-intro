@@ -13,7 +13,7 @@
           </a>
        </li>
     </ul>
-```js {monaco}
+```js
 import { defineStore } from "pinia";
 import { useStore as useUserStore } from "./user"
 
@@ -48,7 +48,7 @@ export const useStore = defineStore("user.todos", {
           </a>
       </li>
     </ul>
-```js {monaco}
+```js
 export default {
   namespaced: true,
   state() {

@@ -3,7 +3,7 @@
 <div class="mt-2 mb-1">
   <a  href="http://localhost:6066" target="_blank">範例</a>
 </div>
-```js {monaco}
+```js
 import { useStore } from "./store";
 import { storeToRefs  } from "pinia"
 
