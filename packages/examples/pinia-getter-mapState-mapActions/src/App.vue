@@ -15,7 +15,7 @@ export default {
   computed: {
     ...mapState(useStore, {
       count: state => state.count,
-      doubleCount: state => state.count
+      doubleCount: state => state.doubleCount
     })
   },
   methods: {

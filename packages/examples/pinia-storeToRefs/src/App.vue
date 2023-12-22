@@ -14,7 +14,6 @@ export default {
     return {
       countValueByDirectlyDestructure,
       countValueByPiniaStoreToRefs,
-      countValueByVueToRefs,
       addCountByOne,
     };
   },
