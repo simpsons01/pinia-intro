@@ -9,9 +9,9 @@ export default {
 
     const addCountByOne = () => {
       try {
-        store.addCountByOne();
+        store.setCount(count.value + 1);
       } catch (error) {
-        console.log("error happened");
+        // silent error
       }
     };
 

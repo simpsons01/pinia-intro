@@ -10,18 +10,16 @@
 import { useStore } from "./store"
 import { mapState, mapActions } from "pinia";
 
-const store = useStore()
-
 export default {
   name: "App",
   computed: {
-    ...mapState(store, {
+    ...mapState(useStore, {
       count: state => state.count,
       doubleCount: state => state.count
     })
   },
   methods: {
-   ...mapActions(store, "addCountByOne")
+   ...mapActions(useStore, ["addCountByOne"])
   }
 };
 </script>

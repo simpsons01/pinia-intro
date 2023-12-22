@@ -1,5 +1,4 @@
 <script>
-import { toRefs } from "vue";
 import { useStore } from "./store";
 import { storeToRefs  } from "pinia"
 export default {
@@ -9,8 +8,6 @@ export default {
     const { count: countValueByDirectlyDestructure } = store
     // ✅
     const { count: countValueByPiniaStoreToRefs } = storeToRefs(store)
-    // ✅
-    const { count: countValueByVueToRefs } = toRefs(store)
 
     const addCountByOne = () => store.addCountByOne();
 
@@ -28,7 +25,6 @@ export default {
   <div>
     <div>countValueByDirectlyDestructure: {{ countValueByDirectlyDestructure }}</div>
     <div>countValueByPiniaStoreToRefs: {{ countValueByPiniaStoreToRefs }}</div>
-    <div>countValueByVueToRefs: {{ countValueByVueToRefs }}</div>
     <div><button @click="addCountByOne">+</button></div>
   </div>
 </template>

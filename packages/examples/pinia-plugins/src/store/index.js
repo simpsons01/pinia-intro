@@ -5,11 +5,12 @@ export const useStore = defineStore("count", {
     count: 0,
   }),
   actions: {
-    addCountByOne() {
-      if (this.count > 5) {
+    setCount(count) {
+      if (this.count > 3) {
         throw new Error("count is bigger than five");
       }
-      this.count += 1;
+      this.count = count;
+      return this.count
     },
   },
   useErrorLog: false,

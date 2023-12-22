@@ -20,8 +20,6 @@ export default {
   setup() {
     const store = useStore();
 
-    store.count
-
     store.addCountByOne();
 
     store.$patch({ count: store.count + 1 });

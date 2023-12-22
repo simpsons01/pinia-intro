@@ -9,7 +9,7 @@ const app = createApp(App);
 
 app.provide(
   "storeRegisterKey", 
-  computed(() => Object.keys(pinia.state._value).join())
+  computed(() => Object.keys(pinia.state.value).join())
 )
 
 app.use(router)

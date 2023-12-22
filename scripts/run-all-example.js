@@ -2,7 +2,7 @@ const { spawn } = require("child_process");
 const { join } = require("path")
 
 
-class PageRunner {
+class ExampleRunner {
   _spawnProcess = null;
 
   run(cmd, arg) {
@@ -14,7 +14,6 @@ class PageRunner {
     });
     
     this._spawnProcess.stderr.on('data', (data) => {
-      this._spawnProcess = null
       console.log(`cmd: "${cmd}  ${arg.join(" ")} stderr"`)
       console.error(data.toString());
     });
@@ -34,6 +33,6 @@ const excludeCmd = [
 
 Object.keys(require(join(__dirname, "../package.json")).scripts).forEach(cmd => {
   if(excludeCmd.indexOf(cmd) === -1) {
-    new PageRunner().run("pnpm", [cmd]) 
+    new ExampleRunner().run("pnpm", [cmd]) 
   }
 })

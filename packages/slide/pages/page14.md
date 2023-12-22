@@ -7,17 +7,15 @@
 import { mapState, mapActions } from "pinia"
 import { useStore } from "./store"
 
-const store = useStore()
-
 export default {
   computed: {
-    ...mapState(store, {
+    ...mapState(useStore, {
       count: state => state.count,
       doubleCount: state => state.count
     })
   },
   methods: {
-   ...mapActions(store, "addCountByOne")
+   ...mapActions(useStore, ["addCountByOne"])
   }
 };
 ```

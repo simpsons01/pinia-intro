@@ -7,10 +7,10 @@
 import { createPinia } from "pinia";
 
 export const customPlugin = ({ pinia, app, store, options }) => {
-  // pinia     正在使用的pinia instance
-  // app       正在使用的vue app instance
-  // store     被創建的store
-  // options   store裡帶的選項
+  // pinia     pinia instance that has been created
+  // app       vue instance that use pinia
+  // store     store instance that has been created
+  // options   store options passed to 'defineStore'
 };
 
 const pinia = createPinia()
